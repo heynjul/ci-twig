@@ -1,0 +1,43 @@
+{% extends "layoutdefault.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+    <script type="text/javascript" src="{{ base_url('public/themes/public/assets/script.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <h1>Index</h1>
+    <!-- link helper -->
+    {{ anchor('help', 'help me', {'class': 'btn btn-sm btn-success', 'title': 'please help me'}) }}
+
+    <!-- form helper -->
+    {{ form_open('site/save', 'id="form-save"', {'id': model.id}) }}
+        
+        <!-- input html -->
+        <input type="text" name="" value="{{ model.id }}">
+
+        <!-- input helper -->
+        {{ form_input('name', model.name, {'class': 'form-control'}) }}
+        <!-- select helper -->
+        {{ form_dropdown('age', ages, model.age, {'class': 'form-control'}) }}
+        <!-- select multiple helper -->
+        {{ form_multiselect('hobby', hobbies, model.hobby, {'class': 'form-control', 'multiple': 'multiple'}) }}
+
+        <input type="submit" name="">
+
+    {{ form_close() }}
+
+{% endblock %}
+
+{% block footerscript %}
+<script type="text/javascript">
+    var jsondata = {{ json_encode(hobbies) }};
+    console.log(jsondata);
+</script>
+{% endblock %}

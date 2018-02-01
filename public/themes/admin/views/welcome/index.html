@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+	<script type="text/javascript">console.log('init header script from page');</script>
+{% endblock %}
+
+{% block content %}
+    <h1>Index</h1>
+    <p class="important">
+        Inside Admin Template
+
+        {% for i in datas %}
+	        <li>{{ i }}</li>
+	    {% endfor %}
+    </p>
+{% endblock %}
+
+{% block footerscript %}
+	{{ parent() }}
+	<script type="text/javascript">
+	var b = 'init index';
+	console.log(b);
+	</script>
+{% endblock %}

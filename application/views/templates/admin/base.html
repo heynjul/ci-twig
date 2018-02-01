@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    {% block head %}
+
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+
+        <link rel="stylesheet" href="style.css" />
+        
+        <script type="text/javascript">console.log('init header script');</script>
+
+    {% endblock %}
+
+    </head>
+    <body>
+        
+        <div id="content">{% block content %}{% endblock %}</div>
+        
+        <div id="footer">
+
+            {% block footer %}
+                &copy; Copyright 2011 by <a href="http://domain.invalid/">you</a>.
+            {% endblock %}
+            
+        </div>
+
+        {% block footerscript %}
+        <script type="text/javascript">
+            var a = 'init base';
+            console.log(a);
+        </script>
+        {% endblock %}
+
+    </body>
+</html>

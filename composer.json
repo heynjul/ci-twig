@@ -1,0 +1,10 @@
+{
+	"description": "The CodeIgniter framework - Using Twig as Template View",
+	"name": "hrydi/codeigniter-twig",
+	"homepage": "www.phpinaja.com",
+	"license": "MIT",
+	"require": {
+		"php": ">=5.3.7",
+		"twig/twig": "^2.0"
+	},
+}
