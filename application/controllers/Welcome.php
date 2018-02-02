@@ -12,9 +12,9 @@ class Welcome extends PublicController {
 	{
 		$model = new stdClass;
 		$model->id = 100;
-		$model->name = 'Kampret';
+		$model->name = 'Julio';
 		$model->age = 20;
-		$model->hobby = ['running'];
+		$model->hobby = ['soccer'];
 
 		$ages = array(
 			10, 15, 20, 25, 30, 35, 40
@@ -22,8 +22,8 @@ class Welcome extends PublicController {
 
 		$hobbies = array(
 			'fishing' => 'Fishing',
-			'running' => 'Running',
 			'soccer' => 'Soccer',
+			'running' => 'Running',
 		);
 
 		$this->data['ages'] = $ages;
