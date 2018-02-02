@@ -13,7 +13,7 @@ class Welcome extends PublicController {
 		$model = new stdClass;
 		$model->id = 100;
 		$model->name = 'Julio';
-		$model->age = 20;
+		$model->age = 15;
 		$model->hobby = ['soccer'];
 
 		$ages = array(
