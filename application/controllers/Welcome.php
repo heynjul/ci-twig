@@ -22,6 +22,7 @@ class Welcome extends PublicController {
 
 		$hobbies = array(
 			'fishing' => 'Fishing',
+			'working' => 'Working',
 			'soccer' => 'Soccer',
 			'running' => 'Running',
 		);
