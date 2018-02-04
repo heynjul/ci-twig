@@ -58,7 +58,7 @@ class MY_Controller extends CI_Controller
 		);
 		foreach ($functions as $function) {
 			if(function_exists($function)){
-				$twig->addFunction(new Twig_Function(
+				$twig->addFunction(new Twig_SimpleFunction(
 					$function, 
 					$function,
 					array(
