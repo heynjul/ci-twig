@@ -42,7 +42,10 @@ class Welcome extends PublicController {
 	 **/
 	function detail()
 	{
-		$this->data['longtext'] = '<p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p><p>asdkjsahdkhasdshdkasd sakdhsakdsd</p>';
+		$this->data['longtext'] = '';
+		for($i=0;$i<=200;$i++){
+			$this->data['longtext'] .= '<p>asdkjsahdkhasdshdkasd sakdhsakdsd</p>';
+		}
 		$this->render('welcome/detail.html', $this->data);
 	}
 }
